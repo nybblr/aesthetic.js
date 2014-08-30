@@ -11,6 +11,8 @@
     "serve": "~1.4.0",
     "coffee-script": "latest",
     "gulp": "latest",
+    "gulp-watch": "latest",
+    "gulp-plumber": "latest",
     "gulp-if": "latest",
     "gulp-concat": "latest",
     "main-bower-files": "latest",
