@@ -1,0 +1,25 @@
+{
+  "name": "aesthetic.js",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/serve/bin/serve build"
+  },
+  "author": "",
+  "devDependencies": {
+    "serve": "~1.4.0",
+    "coffee-script": "latest",
+    "gulp": "latest",
+    "gulp-if": "latest",
+    "gulp-concat": "latest",
+    "main-bower-files": "latest",
+    "gulp-coffee": "latest",
+    "gulp-uglify": "latest",
+    "gulp-sass": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-cssmin": "latest",
+    "gulp-jade": "latest",
+    "gulp-minify-html": "latest"
+  }
+}

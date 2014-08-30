@@ -1,0 +1,20 @@
+{
+  "name": "aesthetic.js",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember": "~1.7.0",
+    "handlebars": "~1.3.0",
+    "jquery": "~2.1.1",
+    "mousetrap": "git://github.com/ccampbell/mousetrap.git"
+  }
+}
