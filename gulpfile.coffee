@@ -1,7 +1,6 @@
 gulp       = require 'gulp'
 watch      = require 'gulp-watch'
 plumber    = require 'gulp-plumber'
-gulpif     = require 'gulp-if'
 concat     = require 'gulp-concat'
 bower      = require 'main-bower-files'
 
@@ -29,7 +28,7 @@ gulp.task 'styles', ->
   gulp.src paths.styles
     .pipe watch()
     .pipe plumber()
-    .pipe gulpif /\.scss$/, sass()
+    .pipe sass()
     .pipe prefix "> 1%"
     # .pipe concat('app.css')
     .pipe cssmin keepSpecialComments: 0
@@ -39,7 +38,7 @@ gulp.task 'pages', ->
   gulp.src paths.pages
     .pipe watch()
     .pipe plumber()
-    .pipe gulpif /\.jade$/, jade()
+    .pipe jade()
     .pipe minifyHTML()
     .pipe gulp.dest 'build'
 
@@ -48,16 +47,16 @@ gulp.task 'vendor-scripts', ->
     .pipe watch()
     .pipe plumber()
     # .pipe concat('vendor.js')
-    .pipe uglify()
+    # .pipe uglify()
     .pipe gulp.dest 'build'
 
 gulp.task 'app-scripts', ->
   gulp.src paths.scripts
     .pipe watch()
     .pipe plumber()
-    .pipe gulpif /\.coffee$/, coffee()
+    .pipe coffee()
     # .pipe concat('app.js')
-    .pipe uglify()
+    # .pipe uglify()
     .pipe gulp.dest 'build'
 
 gulp.task 'scripts', ['vendor-scripts', 'app-scripts']
